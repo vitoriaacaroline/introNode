@@ -6,7 +6,10 @@
  const porta = 3333;
 
  app.listen(porta, () => {
-    console.log('Servidor iniciado na porta' + porta);
+    console.log('Servidor iniciado na porta ' + porta);
     //console.log('Servidor iniciado na porta ${porta}`);
  });
  
+ app.get('/', (request, response) => {
+    response.send('Hello World');
+ });
